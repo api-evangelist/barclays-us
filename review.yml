@@ -1,0 +1,98 @@
+aid: barclays-us
+name: Barclays US
+review:
+  question: Does Barclays US expose a first-party public developer API, downloadable OpenAPI spec, or a documented FDX / CFPB 1033 data-access surface?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Barclays US (Barclays Bank Delaware, dba Barclays US) publishes no
+    first-party public developer portal, API reference, or downloadable
+    OpenAPI/Swagger specification. The public entry point barclaysus.com
+    (and www.barclaysus.com / www.barclaycardus.com) issues a 302 redirect
+    to cards.barclaycardus.com, a marketing and account-servicing site with
+    no developer, API, or sandbox surface. Candidate developer hosts
+    developer.barclaysus.com and developer.barclaycardus.com do not resolve
+    (connection failure, no HTTP response). The developer.barclays.com "API
+    Exchange" that does return HTTP 200 belongs to Barclays UK and is a
+    mandated UK Open Banking / PSD2 program for the UK ring-fenced bank, not
+    the US consumer entity — it must not be attributed to Barclays US.
+
+    US open finance is voluntary and fragmented: there is no single mandated
+    open-banking contract as in the UK or Australia. No FDX-conformant
+    data-access API is documented for Barclays US, no FDX membership was
+    found for Barclays Bank Delaware, and no CFPB Section 1033 (Personal
+    Financial Data Rights) posture is stated on the US site. In practice,
+    consumer-permissioned Barclays US card and deposit data is reached only
+    through third-party aggregators (Plaid, MX, Finicity, Akoya, Yodlee) that
+    connect on the consumer's behalf. The honest result is an identity-only
+    record with no public first-party API surface to harvest.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalUrl: ''
+    downloadableOpenAPI: false
+    fdxParticipant: unknown
+    section1033Posture: not-published
+    aggregatorAccessOnly: true
+    aggregatorsObserved:
+      - Plaid
+      - MX
+      - Finicity
+      - Akoya
+      - Yodlee
+    authModel: none-documented
+    specProvenance: none
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented for the Barclays US consumer entity.
+  probes:
+    - url: https://barclaysus.com
+      status: 302
+      note: Redirects to https://cards.barclaycardus.com/ (consumer marketing/servicing site).
+    - url: https://www.barclaysus.com
+      status: 302
+      note: Redirects to https://cards.barclaycardus.com/.
+    - url: https://www.barclaycardus.com
+      status: 302
+      note: Redirects to https://cards.barclaycardus.com/.
+    - url: https://cards.barclaycardus.com/
+      status: 200
+      note: Live consumer site; no developer or API section.
+    - url: https://developer.barclaysus.com
+      status: 000
+      note: Host does not resolve / no HTTP response — no US developer portal exists at this hostname.
+    - url: https://developer.barclaycardus.com
+      status: 000
+      note: Host does not resolve / no HTTP response.
+    - url: https://developer.barclays.com
+      status: 200
+      note: Barclays UK Open Banking API Exchange (PSD2) — UK entity, NOT Barclays US. Not attributed to this record.
+    - url: https://cards.barclaycardus.com/banking/privacy-policy/
+      status: 200
+      note: US privacy policy (verified).
+    - url: https://cards.barclaycardus.com/banking/terms-of-use/
+      status: 200
+      note: US terms of use (verified).
+sources:
+  - url: https://cards.barclaycardus.com/
+    type: Website
+    note: Barclays US consumer site; co-brand credit cards, small-business cards, installment loans, POS finance, online savings, CDs. No API.
+  - url: https://cards.barclaycardus.com/banking/about-us/
+    type: About
+    note: Describes Barclays US as a leading US co-branded credit card issuer and financial services partner.
+  - url: https://developer.barclays.com
+    type: APIReference
+    note: Barclays UK API Exchange (PSD2 Open Banking) — separate UK entity; explicitly NOT the US consumer bank.
+  - url: https://www.openbankingtracker.com/country/united-states
+    type: Reference
+    note: US open banking is voluntary/aggregator-driven (Plaid, MX, Finicity, Akoya, Yodlee); no single mandated contract.
+actions:
+  apisYmlApis: []
+  reason: |
+    No first-party public API, no downloadable specification, and no
+    documented FDX/1033 data-access endpoint were found for Barclays US. The
+    apis[] array is intentionally empty and no OpenAPI was harvested. This is
+    an honest identity-only (built-stub) profile: aggregator-only data access.

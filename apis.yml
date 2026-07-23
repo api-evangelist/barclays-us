@@ -1,0 +1,55 @@
+aid: barclays-us
+url: https://raw.githubusercontent.com/api-evangelist/barclays-us/refs/heads/main/apis.yml
+name: Barclays US
+kind: company
+description: >-
+  Barclays US is the United States consumer banking arm of Barclays PLC,
+  operated through Barclays Bank Delaware, a Delaware state-chartered bank
+  headquartered in Wilmington. Doing business as Barclays US (barclaysus.com
+  redirects to cards.barclaycardus.com), it is one of the largest co-branded
+  credit card issuers in the country, running highly customized card programs
+  for major travel, airline, retail, and affinity partners (JetBlue, American
+  Airlines, Wyndham, AARP, Gap, and others), alongside small-business cards,
+  installment loans, point-of-sale financing, and a direct-to-consumer online
+  savings and CD franchise. Unlike Barclays UK — which operates a mandated PSD2
+  Open Banking API Exchange at developer.barclays.com — the US consumer entity
+  publishes no first-party public developer portal or downloadable API
+  specification. US open finance is voluntary and fragmented, so consumer-
+  permissioned account and card data from Barclays US is reached in practice
+  through third-party data aggregators rather than a documented first-party
+  API. No FDX-conformant data-access endpoint or formally stated CFPB Section
+  1033 posture is published on the US site as of this profile.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Credit Cards
+- Consumer Banking
+- Co-Brand Cards
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://cards.barclaycardus.com/
+- type: About
+  url: https://cards.barclaycardus.com/banking/about-us/
+- type: Blog
+  url: https://cards.barclaycardus.com/banking/about-us/news-and-views/
+- type: Support
+  url: https://cards.barclaycardus.com/banking/contact-us/
+- type: PrivacyPolicy
+  url: https://cards.barclaycardus.com/banking/privacy-policy/
+- type: TermsOfService
+  url: https://cards.barclaycardus.com/banking/terms-of-use/
+- type: SecurityCenter
+  url: https://www.barclaycardus.com/servicing/security-center
+- type: ParentCompany
+  url: https://www.barclays.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
