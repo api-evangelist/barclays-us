@@ -1,0 +1,14 @@
+{
+  "repo": "barclays-us",
+  "feeds": [
+    {
+      "source": "https://cards.barclaycardus.com/banking/about-us/",
+      "feed_url": "https://cards.barclaycardus.com/banking/about-us/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-01T15:49:00Z"
+}
