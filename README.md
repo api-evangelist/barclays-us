@@ -1,4 +1,4 @@
-# Barclays US (barclays-us)
+# Barclays US
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,48 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Barclays US is the United States consumer banking arm of Barclays PLC, operated through Barclays Bank Delaware, a Delaware state-chartered bank in Wilmington. It is one of the largest co-branded credit card issuers in the country, running customized card programs for major travel, airline, retail, and affinity partners, alongside small-business cards, installment loans, point-of-sale financing, and a direct-to-consumer online savings and CD franchise.
+Barclays US is the United States consumer banking arm of Barclays PLC, operated through Barclays Bank Delaware, a Delaware state-chartered bank headquartered in Wilmington. Doing business as Barclays US (barclaysus.com redirects to cards.barclaycardus.com), it is one of the largest co-branded credit card issuers in the country, running highly customized card programs for major travel, airline, retail, and affinity partners (JetBlue, American Airlines, Wyndham, AARP, Gap, and others), alongside small-business cards, installment loans, point-of-sale financing, and a direct-to-consumer online savings and CD franchise. Unlike Barclays UK — which operates a mandated PSD2 Open Banking API Exchange at developer.barclays.com — the US consumer entity publishes no first-party public developer portal or downloadable API specification. US open finance is voluntary and fragmented, so consumer- permissioned account and card data from Barclays US is reached in practice through third-party data aggregators rather than a documented first-party API. No FDX-conformant data-access endpoint or formally stated CFPB Section 1033 posture is published on the US site as of this profile.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/barclays-us/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/barclays-us/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Credit Cards · Consumer Banking · Co-Brand Cards · Open Finance
 
-## Open Finance / API Posture
+## Barclays US on APIs.io
 
-Unlike Barclays UK — which runs a mandated PSD2 Open Banking API Exchange at [developer.barclays.com](https://developer.barclays.com) — the US consumer entity publishes **no first-party public developer portal, API reference, or downloadable OpenAPI/Swagger specification**. `barclaysus.com` redirects to `cards.barclaycardus.com`, a marketing and account-servicing site with no developer or API surface.
+Everything profiled for Barclays US is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/barclays-us/](https://apis.io/providers/barclays-us/)** — or go straight to one of the APIs or properties below.
 
-US open banking is voluntary and fragmented. Consumer-permissioned account and card data from Barclays US is reached in practice through third-party data aggregators (Plaid, MX, Finicity, Akoya, Yodlee), not a documented first-party API. No FDX-conformant data-access endpoint and no formally stated CFPB Section 1033 posture were found published on the US site as of this profile. This is an honest identity-only record: there is no public API to harvest.
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Financial Services
-- Banking
-- United States
-- Credit Cards
-- Consumer Banking
-- Co-Brand Cards
-- Open Finance
-- Data Aggregation
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Barclays Us Domain Security](https://apis.io/security/barclays-us/barclays-us-domain-security/)
 
-## APIs
+## Where to find this API
 
-No public first-party API is documented by Barclays US. See the open-finance posture above.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://cards.barclaycardus.com/)
-- [About](https://cards.barclaycardus.com/banking/about-us/)
-- [Blog](https://cards.barclaycardus.com/banking/about-us/news-and-views/)
 - [Support](https://cards.barclaycardus.com/banking/contact-us/)
-- [Privacy Policy](https://cards.barclaycardus.com/banking/privacy-policy/)
-- [Terms of Use](https://cards.barclaycardus.com/banking/terms-of-use/)
-- [Security Center](https://www.barclaycardus.com/servicing/security-center)
-- [Parent Company](https://www.barclays.com/)
+- [Blog](https://cards.barclaycardus.com/banking/about-us/news-and-views/)
+- [Terms of service](https://cards.barclaycardus.com/banking/terms-of-use/)
+- [Privacy policy](https://cards.barclaycardus.com/banking/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/barclays-us/](https://apis.io/providers/barclays-us/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Barclays US: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/barclays-us/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
